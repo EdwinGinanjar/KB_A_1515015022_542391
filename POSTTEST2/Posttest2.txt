@@ -1,0 +1,20 @@
+Nama	:	Edwin Ginanjar Firdaus
+Nim	:	1515015022
+POSTTEST 2 KECERDASAN BUATAN
+
+Macam-macam keywoard di visual prolog
+
+1. determ	: menentukan bahwa hanya boleh ada satu fakta dari suatu predikat sepanjang program berjalan.
+2. nondeterm	: menentukan bahwa kemungkinan ada sejumlah fakta dari suatu predikat sepanjang program berjalan(default).
+3. global	: menentukan bahwa section facts adalah global dalam program.
+4. single	: menentukan hanya satu fakta dari predikat yang akan selalu ada.
+5. nocopy	: normalnya pemanggilan fakta akan mengikat variabel ke sebuah string atau ke sebuah object jamak.
+6. clause	: memberikan fakta-fakta yang ada untuk memberikan gambaran kepada VPE dalam melakukan pengujian untuk menjadi solusi dari pertanyaan yang di berikan.
+7. Domain	: menyatakan jenis variabel atau argumen.
+8. predicates	: memberikan gambaran akan kata-kata yang ada dalam program.
+9. Goal		: menyatakan jenis variabel atau argumen.
+10. facts	: untuk memulai section facts
+
+
+
+

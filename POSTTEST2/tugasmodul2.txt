@@ -1,0 +1,41 @@
+Nama	: Edwin Ginanjar Firdaus
+Nim	: 1515015022
+
+Tugas modul 2
+
+1. Ubah Bahasa prolog berikut menjadi bahasa natural :
+	a. Orang(dia)		= dian adalah orang
+	b. Mobil(atoz) 		= atoz adalah merek mobil
+	c. Suka(dia,atoz)	= dian suka mobil atoz
+	d. Dijual(atoz)		= atoz dijual
+	e. dapat_membeli(X,Y):-
+	   orang(X),
+	   mobil(Y),
+	   Suka(X,Y),
+	   dijual(Y). 
+	=> X dapat membeli Y jika
+	   X adalah variabel pengganti orang
+	   Y adalah variabel pengganti mobil
+	   X menyukai Y
+	   Y di jual.
+	f. suka(_Apa).		= Setiap orang suka apa.
+
+2. Ubah bahasa natural berikut kedalam bahasa prolog :
+	a. Ricky mempunyai hobi bermain catur 	= hobi(ricky,catur)
+	b. Embang orangnya pemalas		= pemalas(embang)
+	c. Yusida seorang vegetarian		= vegetarian(yusida)
+	d. Kusdiar pandai bermain gitar		= pandai(gustiar_gitar)
+	e. Mobil yang berwarna merah itu milik Sadek, bermerk BMW.
+	   => milik(mobil,sadek),warna(mobil,merah),merek(mobil,bmw).
+	f. Awan seorang pemain piano, berasal dari pontianak bersuku jawa.
+	   => pemain(awan,piano), berasal(awan,pontianak),suku(awan,jawa).
+	g. Seseorang dikatakan baik jika mempunyai sifat penyayang dan dermawan.
+	   => dikatakan(orang,baik):-sifat(orang,penyayang),sifat(orang,dermawan).
+	h. Seseorang dikatakan pintar jika salah satu dari Matematika atau IPA atau 
+	   IPS mendapat nilai tinggi.
+	   => dikatakan(orang,pintar):-dapat(matematika,tinggi);dpat(ipa,tinggi);
+	      dapat(ips,tinggi).
+	i. Setiap orang pasti mati.
+	   => orang(_,mati).
+
+
