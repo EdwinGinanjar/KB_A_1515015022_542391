@@ -34,5 +34,3 @@ adik(A,B):-usia(A,C),usia(B,D), C<D.
 
 Goal
 cucu(X,Y);
-ibu(X,Y);
-adik(X,Y).

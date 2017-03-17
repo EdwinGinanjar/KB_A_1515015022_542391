@@ -33,7 +33,4 @@ cucu(A,B):-anak(A,C),istri(C,D), anak(D,B).
 adik(A,B):-usia(A,C),usia(B,D), C<D.
 
 Goal
-cucu(X,Y);
-ibu(X,Y);
-adik(X,Y);
-kakek(X,Y).
+cucu(X,Y).
