@@ -1,0 +1,51 @@
+
+
+
+predicates
+  buy_car(symbol,symbol) - determ (i,o)
+  car(symbol,symbol,integer) - nondeterm (i,o,o)
+  colors(symbol,symbol) - nondeterm (i,i)
+
+clauses
+  buy_car(Model,Color):-
+	car(Model,Color,Price),
+	colors(Color,sexy),!,
+	Price > 25000.
+
+  car(maserati,green,25000).
+  car(corvette,black,24000).
+  car(corvette,red,26000).
+  car(porsche,red,24000).
+
+  colors(red,sexy).
+  colors(black,mean).
+  colors(green,preppy).
+
+goal
+  buy_car(corvette,Y).
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- pada goal yang dicari adalah membeli mobil corvette dengan warna Y(variabel yang akan dicari). untuk membeli mobil
+ada beberapa aturan sebagai syarat yaitu mobil memiliki model, color, price (model, warna, harga). Dan warna tergolong
+dalam warna yang sexy, warna seksi yang dimaksud adalah warna merah sesuai dengan pernyataan colors(red,sexy)., 
+untuk aturan harga > 25000 tidak perlu di jalankan karena adanya tanda (!) sebagai fungsi not.
+jadi ketika di jalankan pelacakan hanya akan melacak sampai pada aturan kedua saja yaitu warna dengan kategori sexy.
+
+-proses pembacaan program :
+	
+	- car(maserati,green,25000).
+	*dalam pernyataan ini sudah memenuhi syarat yaitu memiliki model, warna, dan harga. Namun warnanya tidak 
+	termasuk dalam warna sexy. (lacak balik).
+
+	- car(corvette,black,24000).
+	*dalam pernyataan ini juga warnanya tidak memenuhi syarat warna sexy (lacak balik).
+
+	- car(corvette,red,26000).
+	*pada pernyataan ini sudah memenuhi aturan yang di cari yaitu mobil dengan model corvette, warna sexy 
+	yaitu merah, dan pada aturan ketiga tidak diproses karena terdapat fungsi not yang berarti berhenti 
+	atau mencegah lacak balik jadi berhenti pada aturan ke dua saja, yaitu model, dan harga. jadi yang menjadi
+	penentu hanya pada aturan pertama dan kedua.
+
+ketika program sudah dijalankan dan semua aturan terpenuhi maka program akn berhenti melacak dan goal yang di hasilkan
+dari program adalah buy_car (corvette, Y) dan hasilnya adalah = red.
