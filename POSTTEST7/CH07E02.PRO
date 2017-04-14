@@ -1,0 +1,27 @@
+/*****************************************************************************
+
+		Copyright (c) 1984 - 2000 Prolog Development Center A/S
+
+ Project:  
+ FileName: CH07E02.PRO
+ Purpose: 
+ Written by: PDC
+ Modifyed by: Eugene Akimov
+ Comments: 
+******************************************************************************/
+
+domains
+  list = integer* /* or whatever type you want to use */ %pendeklarasian list dengan tipe integer
+
+predicates
+  length_of(list,integer) - procedure (i,o) %predikat length_of yang didalamnya terdapat parameter list (input) dan integer sebagai output 
+
+clauses
+  length_of([], 0). %apabila length_of [] atau list dalam keadaan kosong berarto list bernilai 0
+  length_of([_|T],L):- %list memiliki head dan tail jika
+	length_of(T,TailLength), %maka panjang dari list akan dihitung dari 
+	L = TailLength + 1. %banyaknya tail ditambah 1
+
+goal
+  length_of([1,2,3],L). /*pencarian panjang list dimana head = 1, tail = 2 dan 3 => 2 
+  			karena head pada list bernilai 1 maka banyaknya tail di tambah 1 => 2 + 1 hasilnya adalah 3, dan goal yang dihasilkan bernilai 3*/
